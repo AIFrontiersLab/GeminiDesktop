@@ -1,0 +1,35 @@
+{
+  "name": "codex",
+  "version": "1.0.0",
+  "description": "Electron desktop shell for Google Gemini",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-builder --mac"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "build": {
+    "appId": "com.aswini.geminidesktop",
+    "productName": "Gemini Desktop",
+    "files": [
+      "main.js",
+      "package.json",
+      "assets/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "assets/icons/mac/icon.icns",
+      "target": [
+        "zip"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^40.4.1",
+    "electron-builder": "^26.7.0",
+    "electron-icon-builder": "^2.0.1"
+  }
+}
